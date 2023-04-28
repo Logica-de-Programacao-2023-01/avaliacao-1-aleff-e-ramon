@@ -13,6 +13,21 @@ package q2
 //Ajude os amigos a encontrar o número de problemas para os quais eles escreverão uma solução.
 
 func ProblemsSolved(answers [][3]bool) int {
+	contar := 0
+
+	for i := 1; len(answers); i++ {
+		somatoria := 0
+		for K := 0; K < 3; K++ {
+			if answers[i][K] {
+				somatoria++
+
+			}
+		}
+		if somatoria >= 2 {
+			contar++
+		}
+	}
+
 	// Seu código aqui
-	return 0
+	return contar
 }
